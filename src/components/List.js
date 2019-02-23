@@ -1,9 +1,21 @@
-import React from 'react';
+import React,{Fragment} from 'react';
 
 
-const List = () => {
+
+function List({ pokedata }) {
   return(
-    <h1>Lista de pokemons</h1>
+    <Fragment>
+      <h1>Lista de pokemons</h1>
+      <ul>
+        {pokedata.map((pokemon, index) => {
+          return (
+          <li key={index}>
+            {pokemon.name}
+          </li>
+          );
+        })}
+      </ul>
+    </Fragment>
   );
 }
 
