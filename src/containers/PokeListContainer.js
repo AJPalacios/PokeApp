@@ -1,8 +1,7 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
 import List from '../components/List';
-import { AppBar, Typography, Toolbar } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles';
+import AppNav from '../components/AppNav';
 
 class PokeListContainer extends Component {
 
@@ -26,24 +25,15 @@ class PokeListContainer extends Component {
   }
 
   render() {
-    const { classes } = this.props;
     const { pokeData } = this.state;
 
     return(
       <>
-        <AppBar className={classes.NavColor} position="static">
-          <Toolbar variant="dense">
-            <Typography variant="h6" component="p">PokeApp</Typography>
-          </Toolbar>
-        </AppBar>
+        <AppNav />
         <List pokedata={pokeData} />
       </>
     );
   }
 }
 
-export default withStyles({
-  NavColor:{
-    backgroundColor: '#EF5350'
-  }
-})(PokeListContainer);
+export default PokeListContainer;
