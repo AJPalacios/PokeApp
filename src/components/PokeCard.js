@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
-function PokeCard({ name, classes, image, to }) {
+function PokeCard({ name, classes, image, to='' }) {
 	return(
 		<Card className={classes.item}>
 			<CardMedia className={classes.media} image={image}/>
@@ -16,12 +16,12 @@ function PokeCard({ name, classes, image, to }) {
 
 export default withStyles({
 	item:{
-		minWidth: "300px",
-		margin: "1em",
+		minWidth: "350px",
 		textAlign: "center",
-		margin: "2em"
+		margin: "2em",
+		padding: '1em'
 	},
 	media:{
-		minHeight: "250px"
+		minHeight: "350px"
 	}
 })(PokeCard);
