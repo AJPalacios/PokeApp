@@ -10,7 +10,7 @@ function List({ pokedata }) {
         <Grid container justify="center">
         {pokedata.map((pokemon, index) => {
             
-          let url = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other-sprites/official-artwork/"
+          let url = `${process.env.REACT_APP_POKE_NEW_ART_INSIDE_API}`
           let pokeIndex = pokemon.url.split('/')[pokemon.url.split('/').length - 2]
           
           return <PokeCard key={index} to={`/poke-info/${pokeIndex}/${pokemon.name}`} name={pokemon.name} image={`${url}${pokeIndex}.png?raw=true`}/>
