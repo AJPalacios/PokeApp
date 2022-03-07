@@ -36,7 +36,7 @@ class PokeInfoContainer extends Component {
 	}
 	
 	render() {
-		let url = `${process.env.REACT_APP_POKEMON_ART}`;
+		let url = `${process.env.REACT_APP_POKE_NEW_ART_INSIDE_API}`;
 		const { pokemonDescription, pokeName, pokeId } = this.state;
 		
 		return (
